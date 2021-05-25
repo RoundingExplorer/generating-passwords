@@ -1,5 +1,7 @@
 import random
 import array
+# used to create a sha256 hash
+import hashlib
 
 # maximum length of password needed
 # this can be changed to suit your password length
@@ -58,3 +60,7 @@ for x in temp_pass_list:
 		
 # print out password
 print(password)
+
+# generate a sha256 hash
+hashedPassword = hashlib.sha256(password.encode()).hexdigest()
+print(hashedPassword)
